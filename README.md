@@ -90,7 +90,7 @@ This project taught us the power of combining **AI and robotics** to address urb
 
 ## 🎥 Demo / 
 
-[watch the demo!]->(https://drive.google.com/file/d/1l6NDHIehwuwdhlFE9Pbl5tkEanyvBgME/view?usp=drive_link)
+[watch the demo!]->([https://drive.google.com/file/d/1l6NDHIehwuwdhlFE9Pbl5tkEanyvBgME/view?usp=drive_link](https://drive.google.com/file/d/1l6NDHIehwuwdhlFE9Pbl5tkEanyvBgME/view?usp=sharing))
 ---
 
 ## 🙏 Acknowledgements
