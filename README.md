@@ -1,7 +1,4 @@
 
-markdown
-Copy
-Edit
 # 🚁 AI-Powered Drone for Smart Parking Detection
 
 ## 👨‍💻 Team Members
