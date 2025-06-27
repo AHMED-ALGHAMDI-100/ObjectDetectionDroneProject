@@ -100,5 +100,7 @@ Special thanks to our instructors and all contributors who supported this journe
 - Ultralytics YOLOv8
 - Python, OpenCV
 - DJI Tello Drone
-
+_______________________________________________________________________
+_______________________________________________________________________
+[Since the project's files are large you can see it by clicking the link....(all files are there) :>] (https://drive.google.com/drive/folders/1_3SDiT8CAsXfc7ZDjsS0VOioZsmNUy0p?usp=sharing)
 ---
