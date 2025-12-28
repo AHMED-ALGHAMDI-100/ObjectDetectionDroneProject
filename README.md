@@ -29,6 +29,3 @@ The system successfully detected and classified parking spots in real-time durin
 *   **Future Improvements:** Plans include adding functionality to detect "wrong parking" (e.g., taking two spots), classifying vehicle types (cars vs. trucks), and implementing drone-assisted guidance for drivers [9].
 
 --------------------------------------------------------------------------------
-1. SkySpot AI (Emphasizes the drone aspect and detection capability).
-2. Drone-Based Occupancy Detector (A more technical, descriptive title).
-3. YOLO Parking Monitor (Highlights the specific model architecture used).
