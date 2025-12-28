@@ -1,106 +1,34 @@
+# Parking Vision: AI Eyes on Every Spot
 
-# 🚁 AI-Powered Drone for Smart Parking Detection
+## Project Overview
+This project leverages computer vision and drone technology to solve parking management challenges. By integrating a Tello drone with a custom-trained object detection model, the system provides real-time monitoring to determine if parking spaces are "Occupied" or "Empty" [1, 4]. The solution is designed to be scalable, easy to deploy, and effective in outdoor environments where traditional sensors are too costly [4].
 
-## 👨‍💻 Team Members
-- **Mohammed Omar Halawani**-(STEELWARDEN)-
-- **Mohammed Almansour**-(covu0)-
-- **Naif Almasoud**-(CodeNaif)-
-- **Ahmed Al-Ghamdi**-(I think it's clear)-
+## The Challenge
+We initially attempted to use models trained on publicly available datasets, but results were consistently suboptimal due to local environmental factors [5]. Specifically, the target parking lot used circular ground markings rather than traditional painted lines, which confused standard models [6].
 
----
+## Methodology & Technologies
+*   **Hardware:** Tello Drone (for testing/overhead views) and Smartphones (for data collection) [6].
+*   **Model:** YOLOv8s (You Only Look Once), chosen for its object detection capabilities [2].
+*   **Tools:** Visual Studio for training, Roboflow for annotation [2].
+*   **Pipeline:**
+    1.  **Data Collection:** Manually captured images of local parking lots using smartphones and drones to ensure variety in angles and lighting [2, 6].
+    2.  **Preprocessing:** Manually annotated images and applied augmentation (rotation, flipping, brightness changes) to expand the dataset [2].
+    3.  **Training:** The model was trained over 2.5 hours [3].
 
-## 📌 Project Overview
+## Results
+The model was tested in real-world scenarios with live drone footage, yielding high-performance metrics:
+*   **Precision:** 99% [3]
+*   **mAP (Mean Average Precision):** 75% [3]
+*   **Recall:** 64% [3]
 
-This project addresses a real-world urban challenge: **finding available parking spaces**. We built a system using a **Tello drone** and an **AI-based object detection model (YOLOv8)** to detect and classify parking spots as **occupied** or **empty** in real time. 
+The system successfully detected and classified parking spots in real-time during flight tests [3].
 
-Our solution is designed to be **scalable, mobile, and adaptable**, ideal for locations where traditional sensors are impractical.
+## Key Learnings & Future Work
+*   **Data Quality:** We learned that data collected from the actual target environment is more critical for accuracy than the sheer quantity of generic data [7].
+*   **Challenges Overcome:** The project navigated hardware limitations, including drone overheating and poor camera stabilization [8].
+*   **Future Improvements:** Plans include adding functionality to detect "wrong parking" (e.g., taking two spots), classifying vehicle types (cars vs. trucks), and implementing drone-assisted guidance for drivers [9].
 
----
-
-## 📷 Data Collection
-
-- We created our own **custom dataset** using smartphone and drone images.
-- Images were taken from **multiple angles**, lighting conditions, and distances.
-- Parking spots in our location are **marked with circular ground markers**—making existing public datasets ineffective.
-- We **manually annotated** each image using [Roboflow](https://roboflow.com/).
-- Data augmentation included: rotation, flipping, brightness variation, etc.
--NOTE:[We cannot upload our dataset due to the legal issues about license plates].
-
----
-
-## 🧠 Model Training
-
-- Model used: `YOLOv8s` (You Only Look Once v8 - small version)
-- Platform: **Visual Studio Code** with **Python**
-- Dataset Size: Images from various parking areas
-- Labels: `empty`, `occupied`
-- Training time: ~2.5 hours
-- Training involved annotation and augmentation using Roboflow tools
-
----
-
-## 🧪 Testing & Results
-
-- Tested the model on **real-life images** and during **live drone flights**
-- Achieved:
-  - 🔍 **Precision**: 99%
-  - 🔁 **Recall**: 64%
-  - 📊 **mAP (mean average precision)**: 75%
-- The model successfully identified and classified parking spots **in real time**
-
----
-
-## ⚠️ Challenges Faced
-
-1. **Dataset Limitations**: Public datasets were not effective; we had to create our own.
-2. **Manual Annotation**: Very time-consuming but necessary for accuracy.
-3. **Hardware Constraints**: Real-time detection required high computational power.
-4. **Drone Issues**: Tello drone often overheated or shut down unexpectedly.
-5. **Camera Quality**: Low resolution and poor stabilization reduced detection accuracy.
-
----
-
-## 🚀 Future Improvements
-
-- ❌ **Wrong Parking Detection** – Detect violations like double parking or blocking.
-- 🚗 **Vehicle Type Classification** – Differentiate between cars, trucks, motorcycles, etc.
-- 🧭 **Drone-Assisted Parking Guidance** – Help vehicles find spots using real-time drone visuals.
-- 🧠 **Model Accuracy Enhancement** – Gather more diverse and high-quality data.
-
----
-
-## 💡 Why This Project?
-
-- ✅ **Real-Time Monitoring** – Live feedback on parking availability.
-- 🔄 **Scalable** – Easily redeployable in new locations.
-- 🏗️ **Infrastructure-Free** – No need for fixed sensors or major installations.
-- 📈 **Insightful Data** – Provides analytics like usage trends and peak hours.
-
----
-
-## 📚 What We Learned
-
-This project taught us the power of combining **AI and robotics** to address urban challenges. Key takeaways include:
-
-- Effective **data selection** is more important than sheer data quantity.
-- **Custom, context-specific data** dramatically improves model performance.
-- **Integrating drones** with AI systems unlocks new possibilities for automation and monitoring.
-
----
-
-## 🎥 Demo / 
-
-[watch the demo!]->([https://drive.google.com/file/d/1l6NDHIehwuwdhlFE9Pbl5tkEanyvBgME/view?usp=drive_link](https://drive.google.com/file/d/1l6NDHIehwuwdhlFE9Pbl5tkEanyvBgME/view?usp=sharing))
----
-
-## 🙏 Acknowledgements
-
-Special thanks to our instructors and all contributors who supported this journey. Tools used:
-- Roboflow
-- Ultralytics YOLOv8
-- Python, OpenCV
-- DJI Tello Drone
-_______________________________________________________________________
-_______________________________________________________________________
-[Since the project's files are large you can see it by clicking the link....(all files are there) :>] (https://drive.google.com/drive/folders/1_3SDiT8CAsXfc7ZDjsS0VOioZsmNUy0p?usp=sharing)
----
+--------------------------------------------------------------------------------
+1. SkySpot AI (Emphasizes the drone aspect and detection capability).
+2. Drone-Based Occupancy Detector (A more technical, descriptive title).
+3. YOLO Parking Monitor (Highlights the specific model architecture used).
